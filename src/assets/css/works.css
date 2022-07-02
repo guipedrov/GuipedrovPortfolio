@@ -1,0 +1,59 @@
+.works-title {
+    padding-bottom: 100px;
+}
+.checkboxes-container {
+    padding-top: 1rem;
+    display: flex;
+}
+.checkbox {
+    margin-right: 10px;
+    display: inline;
+    border-radius: 10px;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 0.9em;
+    padding-right: 1em;
+}
+.checkbox.webapps:hover, .checkbox.landingpages:hover, .checkbox.spas:hover, .checkbox.statics:hover {
+    color: #30292F;
+    background: #dbd5d9;
+    border: 0px solid #054A29;
+    box-shadow: 2px 2px #30292F;
+    cursor: pointer;
+}
+.checkbox.webapps {
+    border: 1px solid #FDCA40;
+    background: #FDCA40;
+    color: #101D0C;
+}
+.checkbox.landingpages {
+    border: 1px solid #054A29;
+    background: #054A29;
+    color: #FBFCFF;
+}
+.checkbox.spas {
+    border: 1px solid #101D0C;
+    background: #101D0C;
+    color: #FBFCFF;
+}
+.checkbox.statics {
+    border: 1px solid #30292F;
+    background: #30292F;
+    color: #FBFCFF;
+}
+.checkbox > input, .checkbox > div {
+    display: inline;
+}
+.checktext {
+    padding-left: 0.7rem;
+}
+.works-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.1rem;
+    row-gap: 1.1rem;
+    /*not concerning flex:*/
+    padding-top: 50px;
+}
+
+

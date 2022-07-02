@@ -1,0 +1,50 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    /*not concerning flex:*/
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+/* ====== Each box of the Header.jsx (there are 3): ====== */
+header > div:nth-child(1) {
+    display: flex;
+    column-gap: 1.3rem;
+    flex: 1;
+    padding-left: 3rem;
+    color: #FDCA40;
+}
+header > div:nth-child(1) > a {
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /*link concerning*/
+    text-decoration: none;
+    color: inherit;
+}
+header > div:nth-child(1) > a:hover {
+    text-decoration: underline;
+}
+header > div:nth-child(2) {
+    text-align: center;
+    flex: 2;
+    white-space: nowrap;
+}
+header > div:nth-child(3) {
+    display: flex;
+    justify-content: end;
+    padding-right: 3rem;
+    flex: 1;
+}
+header > div:nth-child(3) > div {
+    padding-left: 3rem;
+}
+
+/* ====== Screen: ====== */
+@media (max-width: 600px) {
+    header {
+        display: grid;
+        justify-content: space-between;
+    }
+}

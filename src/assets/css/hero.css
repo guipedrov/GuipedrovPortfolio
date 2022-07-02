@@ -1,0 +1,39 @@
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*not concerning flex:*/
+    background-color: #054A29;
+    height: 40rem;
+    padding: 0px;
+}
+.hero-left {
+    display: flex;
+    align-items: center;
+    color: #D1FCE8;
+    height: 100%;
+    min-width: 50%;
+    max-width: 50%;
+}
+.hero-left > .hero-texts {
+    padding-left: 4rem;
+    max-width: 80%;
+}
+.hero-right {
+    height: 100%; 
+    background: #ff9944;
+    padding: 0;
+    min-width: 50%;
+    max-width: 50%;
+}
+.hero-right > img {
+    width: 100%;
+    align-self: center;
+    justify-self: end;
+}
+
+/*
+colors:
+#D1FCE8
+
+*/
