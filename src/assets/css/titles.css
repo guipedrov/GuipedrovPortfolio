@@ -1,6 +1,14 @@
-#title {
+.titles {
     margin: 0;
-    font-size: 2.2rem;
+    font-size: 2.35rem;
     font-weight: 700;
     color: #30292F;
+}
+    
+@media screen and (max-width: 767px) {
+    .titles {
+        font-size: calc(3vh);
+        font-weight: 700;
+        color: #30292f;
+    }
 }

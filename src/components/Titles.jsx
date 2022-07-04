@@ -4,7 +4,9 @@ import '../assets/css/titles.css'
 function Titles({title}) {
 
   return (
-    <div id="title">{title}</div>
+    <div className="titles">
+      {title} {/*Poderia ser children*/}
+    </div>
   )
 }
 

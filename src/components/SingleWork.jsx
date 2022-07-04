@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import SingleImage from './SingleImage'
 import '../assets/css/single.css'
 
-function SingleWork({name, type, typename, date, tecnologies, imgcode, github, original}) {
+function SingleWork({name, type, typename, date, technologies, imgcode, github, original}) {
 
   const [sortedcolor, setSortedcolor] = useState()
   const [sortedbg, setBg] = useState("none")
@@ -10,13 +10,13 @@ function SingleWork({name, type, typename, date, tecnologies, imgcode, github, o
   useEffect(() => {
     switch(type) {
         case "webapps":
-            setSortedcolor("#FDCA40")
+            setSortedcolor("#e5e510")
         break
         case "landingpages":
-            setSortedcolor("#054A29")
+            setSortedcolor("#405025")
         break
         case "spas":
-            setSortedcolor("#101D0C")
+            setSortedcolor("#0A1F14")
         break
         case "statics":
             setSortedcolor("#30292F")
@@ -46,7 +46,7 @@ function SingleWork({name, type, typename, date, tecnologies, imgcode, github, o
         style={{
             display: "inline-block",
             paddingTop: "2px",
-            paddingBottom: "8px",
+            paddingBottom: "9px",
             color: `${sortedcolor}`,
             textTransform: "uppercase",
             fontWeight: "700",
@@ -57,13 +57,13 @@ function SingleWork({name, type, typename, date, tecnologies, imgcode, github, o
 
         <div //Name
         style={{
-            paddingBottom: "8px",
-            fontSize: "1.3rem",
+            paddingBottom: "9px",
+            fontSize: "1.465rem",
         }}>
         <a href="#" style={{textDecoration: "none", color:"inherit"}}>{name}</a>
         </div>
 
-        <div //Tecnologies
+        <div //Technologies
         style={{
             paddingTop: "0.4rem",
             display: "block",
@@ -73,7 +73,7 @@ function SingleWork({name, type, typename, date, tecnologies, imgcode, github, o
         >
         Tecnologias usadas:
         </div>
-        <div
+        <div className="technologies"
         style={{
             paddingTop: "0.7rem",
             paddingBottom: "0.3rem",
@@ -81,9 +81,9 @@ function SingleWork({name, type, typename, date, tecnologies, imgcode, github, o
             columnGap: "0.6rem",
         }}
         >
-        {tecnologies.map((tec) => { 
-            return <SingleImage url={tec} size={"1.7rem"} display={"inline"} />
-            })}
+        {technologies.map((tec) => { 
+            return <a href="#skills"><SingleImage url={tec} size={"1.7rem"} display={"inline"} badge={true} /></a>
+            })}            
         </div>
 
         </div> {/*Fim do content wrapper*/}

@@ -1,12 +1,29 @@
 .singlework {
-    display: block;
+    /*Flex item:*/
+    flex: 1 1 20rem;
+    max-width: 21rem;
     background: #FFFFFF;
     color: #30292F;
     border-radius: 10px;
-    box-shadow: 2px 2px #054A29;
-    min-width: 13rem;
-    max-width: 20rem;
+    border: 1px solid #e9e9d9;
+    box-shadow: 1px 1px #FBFCFF;
     max-height: fit-content;
+}
+@media screen and (max-width: 767px) {
+    .singlework {
+        /*Flex item:*/
+        flex: 1 1 17rem;
+        max-width: 21rem;
+        background: #FFFFFF;
+        color: #30292F;
+        border-radius: 10px;
+        border: 1px solid #e9e9d9;
+        box-shadow: 1px 1px #FBFCFF;
+        max-height: fit-content;
+    }
+}
+.singlework:hover .singleimage .sitepic {
+    filter: saturate(1.35)
 }
 .singlework > div:nth-child(2) > div:nth-child(2):hover { /*Name*/
     color: #453e44;
@@ -16,24 +33,27 @@
     z-index: 1;
     position: static;
     background: #FFFFFF;
+    border-right: 1px solid #e5e510;
     color: #30292F;
     border-radius: 10px;
-    border: 0px solid #FDCA40;
-    box-shadow: 3px 3px #FDCA40, 0px 0px 32px 0px #054a291c;
-    /*max-width: 20.095rem;*/
+    box-shadow: 2px 2px #e5e510, 0px 0px 36px 0px #4050251c;
 }
-.tooltip.tooltiptext {
+.singleimage > div > .tooltip {
+    display: none;
     visibility: hidden;
-    width: 120px;
-    background-color: black;
+    width: fit-content;
+    background-color: #405025f0;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 8px 12px 8px 12px;
     /* Position the tooltip */
-    position: absolute;
+    position: relative;
+    left: 30px;
+    top: 2px;
     z-index: 1;
   }
-.tooltip:hover .tooltiptext {
+.singleimage:hover .tooltip {
+    display: block;
     visibility: visible;
 }

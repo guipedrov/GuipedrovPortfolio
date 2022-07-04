@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <div style={{background: "linear-gradient(0deg, rgba(254,238,194,1) 0%, rgba(255,255,255,1) 100%)",}}>
+      <div style={{background: "linear-gradient(0deg, rgba(251,251,198,1) 0%, rgba(255,255,255,1) 90%)",}}>
       <Works works={works} />
       <About about={about} />
       <Skills />

@@ -1,6 +1,8 @@
 import React from 'react'
 import "../assets/css/hero.css"
 import heroi from "../assets/images/arpia.png"
+import heroi2 from "../assets/images/selfie1.png"
+import heroi3 from "../assets/images/selfie2.png"
 
 function Hero() {
   
@@ -8,25 +10,18 @@ function Hero() {
     <div id="hero">
 
       <div className="hero-left">
-        <div className="hero-texts">
-          <span style={{fontSize: '1.7rem', color: '#FBFCFF'}}>Meu nome é <span style={{fontSize: '1.6rem', color: '#FBFCFF'}}>Guilherme Pedro Velho</span>, mas @guipedrov é mais curto. Sou <span style={{fontSize: '1.6rem', color: '#FBFCFF'}}>desenvolvedor front-end</span> e moro em Cabo Frio/RJ.</span>
+        <div className="hero-texts"> {/*Introduction:*/}
+          <span className="text-out" style={{color: '#FBFCFF', lineHeight: '2.3rem'}}>Meu nome é <span className="text-in" style={{color: '#e5e510'}}>Guilherme Pedro Velho</span>, mas @guipedrov é mais curto. Sou <span className="text-in" style={{color: '#e5e510'}}>desenvolvedor front-end</span> e moro em Cabo Frio/RJ.</span>
           <br/><br/>
-          Consigo resolver um cubo mágico em 1 minuto (como 5% dos espectadores desse tutorial)
+          Consigo resolver um cubo mágico em 1 minuto e te ensinar em 20.
           <br/>
-          Desde criança vislumbrava como seria poder planejar e então construir coisas assim como imaginadas, de cidades de lego, passando por layout produtivos, até chegar às aplicações para web com suas infinitas funcionalidades possíveis.
-          <br/>
-          Se você me fizer perguntas sobre JavaScript, provavelmente saberei responder a maioria delas, quanto à minha forma de pensar, essa é fundada no React.js e suas maravilhosas Hooks.
+          Quando criança gostava de construir coisas assim como as imaginava, de cidades de lego, passando por layouts produtivos, até chegar às aplicações para web com suas infinitas possibilidades de funcionalidades.
           <br/><br/>
-          Faço combinações, arranjos e permutações para me divertir (mesmo) e as vezes uso óculos escuro sem precisar.
-          <br/>
-          Para saber sobre coisas mais importantes, <a href="#works" style={{color: '#FDCA40', textDecoration:'underline'}}>aqui é o lugar.</a>
-        <div>
-          Links
-        </div>
+          Se você me fizer perguntas sobre <a href="#works" style={{color: '#00CCBE', textDecoration:'underline'}}>JavaScript</a> vou saber responder a maioria delas e quanto à minha forma de pensar, essa é fundada no <a href="#works" style={{color: '#00CCBE', textDecoration:'underline'}}>React.js</a> e suas maravilhosas Hooks. Saiba mais coisas sobre mim <a href="#works" style={{color: '#00CCBE', textDecoration:'underline'}}>aqui.</a>
         </div>
       </div>
-      
-      <div className="hero-right">
+      <div className="hero-right"> {/*Photo:*/}
+          <img src={heroi2} alt="" />
       </div>
 
     </div>
