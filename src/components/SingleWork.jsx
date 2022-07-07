@@ -2,12 +2,38 @@ import React, {useState, useEffect} from 'react'
 import SingleImage from './SingleImage'
 import '../assets/css/single.css'
 
-function SingleWork({name, type, typename, date, technologies, imgcode, github, original}) {
+function SingleWork({name, type, typename, date, technologies, imgcode, github, original, link, handleModal}) {
 
   const [sortedcolor, setSortedcolor] = useState()
   const [sortedbg, setBg] = useState("none")
+  const [description, setDescription] = useState()
+  const [projetoOriginal, setProjetoOriginal] = useState()
+
+  function handleChange() {
+    handleModal({typename, name, imgcode, description, github, original, technologies, sortedcolor, link, projetoOriginal})
+  }
 
   useEffect(() => {
+    if(original) {
+      setProjetoOriginal("Projeto Original ✅")      
+    } else {
+      setProjetoOriginal("")
+    }
+  }, [])
+
+  useEffect(() => {
+    switch(name) {
+        case "Personality Pipe": setDescription("hello 1"); break
+        case "Posso misturar?": setDescription(""); break
+        case "Crypto-Zap": setDescription(""); break
+        case "1 Chat 4 All": setDescription(""); break
+        case "Escola Montessoriana Maria Flor": setDescription(""); break
+        case "Karina Shiatsu": setDescription(""); break
+        case "Ohana Tour": setDescription(""); break
+        case "Pincel Cúbico": setDescription(""); break
+        case "ERPs": setDescription(""); break
+        default: setDescription("descrição do site")
+    }
     switch(type) {
         case "webapps":
             setSortedcolor("#e5e510")
@@ -33,7 +59,7 @@ function SingleWork({name, type, typename, date, technologies, imgcode, github, 
             padding: '0px',
             margin: '0px',
         }}>
-        <SingleImage url={imgcode} size={"100%"} />
+        <SingleImage url={imgcode} size={"100%"} borderradius="10px 10px 0px 0px" />
         </div>
 
         <div //Content Wrapper
@@ -60,7 +86,7 @@ function SingleWork({name, type, typename, date, technologies, imgcode, github, 
             paddingBottom: "9px",
             fontSize: "1.465rem",
         }}>
-        <a href="#" style={{textDecoration: "none", color:"inherit"}}>{name}</a>
+        <div className="single-name" onClick={()=>handleChange()} style={{textDecoration: "none", color:"inherit"}}>{name}</div>
         </div>
 
         <div //Technologies

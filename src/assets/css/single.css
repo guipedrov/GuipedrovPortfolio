@@ -22,6 +22,9 @@
         max-height: fit-content;
     }
 }
+.single-name {
+    cursor: pointer;
+}
 .singlework:hover .singleimage .sitepic {
     filter: saturate(1.35)
 }

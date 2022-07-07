@@ -4,7 +4,7 @@
     align-items: center;
     /*not concerning flex:*/
     background-color: #405025;
-    height: 36rem;
+    height: 37rem;
     padding: 0px;
 }
 .hero-left {
@@ -25,11 +25,11 @@
 }
 .text-out {
     font-size: calc(1.3vw + 1vmin);
-    line-height: 1.7rem;
+    line-height: 1.9rem;
 }
 .text-in {
     font-size: calc(1.4vw + 1vmin);
-    line-height: 1.7rem;
+    line-height: 1.9rem;
 }
 .hero-right {
     display: flex;
@@ -63,7 +63,7 @@
     width: 100%;
 }
 .hero-texts {
-    padding: 8vw 8.5vw 9vw 8.5vw;
+    padding: 8vw 8.5vw 11vw 8.5vw;
     max-width: fit-content;
     max-height: fit-content;
     font-size: calc(4.2vw);
@@ -71,11 +71,11 @@
 }
 .text-out {
     font-size: calc(6vw);
-    line-height: calc(2vw);
+    line-height: calc(8.5vw);
 }
 .text-in {
     font-size: calc(6.3vw);
-    line-height: calc(2vw);
+    line-height: calc(8.5vw);
 }
 .hero-right {
     flex: 1;

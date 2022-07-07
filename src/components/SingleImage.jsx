@@ -1,13 +1,13 @@
 import React from 'react'
 //Imagens dos sites:
-import personalitypipe from "../assets/images/arpia.png"
-import possomisturar from "../assets/images/arpia.png"
-import cryptozap from "../assets/images/arpia.png"
-import onechat4all from "../assets/images/arpia.png"
-import mariaflor from "../assets/images/arpia.png"
-import karina from "../assets/images/arpia.png"
-import ohanatour from "../assets/images/arpia.png"
-import erps from "../assets/images/arpia.png"
+import personalitypipe from "../assets/images/imagem-indisponivel.png"
+import possomisturar from "../assets/images/imagem-indisponivel.png"
+import cryptozap from "../assets/images/imagem-indisponivel.png"
+import onechat4all from "../assets/images/imagem-indisponivel.png"
+import mariaflor from "../assets/images/imagem-indisponivel.png"
+import karina from "../assets/images/imagem-indisponivel.png"
+import ohanatour from "../assets/images/imagem-indisponivel.png"
+import erps from "../assets/images/imagem-indisponivel.png"
 //Badges:
 import js from "../assets/images/js-mask.png"
 import node from "../assets/images/node-mask.png"
@@ -23,6 +23,16 @@ import react_ from "../assets/images/react.png"
 import html_ from "../assets/images/html.png"
 import css_ from "../assets/images/css.png"
 import ts_ from "../assets/images/ts.png"
+import router_ from "../assets/images/router.png"
+import redux_ from "../assets/images/redux.png"
+import bootstrap_ from "../assets/images/bootstrap.png"
+import mui_ from "../assets/images/mui.png"
+import sass_ from "../assets/images/sass.png"
+import firebase_ from "../assets/images/firebase.png"
+import sql_ from "../assets/images/sql.png"
+import styled_ from "../assets/images/styled.png"
+import aws_ from "../assets/images/aws.png"
+
 //Social Networks Logos:
 import instagram from "../assets/images/instagram.png"
 import email from "../assets/images/email.png"
@@ -34,25 +44,26 @@ import cv_en from "../assets/images/cv-en.png"
 import '../assets/css/single.css'
 import '../assets/css/sections.css'
 
-function SingleImage({url, size, divsize, display, badge, social}) {
+function SingleImage({url, size, divsize, display, badge, social, borderradius}) {
   
   return (
     <div
     className="singleimage"
     style={{
         display: `${display}`,
-        padding: '0px',
-        margin: '0px',
+        width:  `${divsize}`,
+        // padding: '0px',
+        // margin: '0px',
     }}
     >
-        {(url === "personalitypipe") ? <img className="sitepic" style={{width: `${size}`, borderRadius: '10px 10px 0px 0px',}} src={personalitypipe} alt="site"/> : null}
-        {(url === "possomisturar") ? <img className="sitepic" style={{width: `${size}`, borderRadius: '10px 10px 0px 0px',}} src={possomisturar} alt="site"/> : null}
-        {(url === "cryptozap") ? <img className="sitepic" style={{width: `${size}`, borderRadius: '10px 10px 0px 0px',}} src={cryptozap} alt="site"/> : null}
-        {(url === "onechat4all") ? <img className="sitepic" style={{width: `${size}`, borderRadius: '10px 10px 0px 0px',}} src={onechat4all} alt="site"/> : null}
-        {(url === "mariaflor") ? <img className="sitepic" style={{width: `${size}`, borderRadius: '10px 10px 0px 0px',}} src={mariaflor} alt="site"/> : null}
-        {(url === "karina") ? <img className="sitepic" style={{width: `${size}`, borderRadius: '10px 10px 0px 0px',}} src={karina} alt="site"/> : null}
-        {(url === "ohanatour") ? <img className="sitepic" style={{width: `${size}`, borderRadius: '10px 10px 0px 0px',}} src={ohanatour} alt="site"/> : null}
-        {(url === "erps") ? <img className="sitepic" style={{width: `${size}`, borderRadius: '10px 10px 0px 0px',}} src={erps} alt="site"/> : null}
+        {(url === "personalitypipe") ? <img className="sitepic" style={{width: `${size}`, borderRadius: `${borderradius}`,}} src={personalitypipe} alt="site"/> : null}
+        {(url === "possomisturar") ? <img className="sitepic" style={{width: `${size}`, borderRadius: `${borderradius}`,}} src={possomisturar} alt="site"/> : null}
+        {(url === "cryptozap") ? <img className="sitepic" style={{width: `${size}`, borderRadius: `${borderradius}`,}} src={cryptozap} alt="site"/> : null}
+        {(url === "onechat4all") ? <img className="sitepic" style={{width: `${size}`, borderRadius: `${borderradius}`,}} src={onechat4all} alt="site"/> : null}
+        {(url === "mariaflor") ? <img className="sitepic" style={{width: `${size}`, borderRadius: `${borderradius}`,}} src={mariaflor} alt="site"/> : null}
+        {(url === "karina") ? <img className="sitepic" style={{width: `${size}`, borderRadius: `${borderradius}`,}} src={karina} alt="site"/> : null}
+        {(url === "ohanatour") ? <img className="sitepic" style={{width: `${size}`, borderRadius: `${borderradius}`,}} src={ohanatour} alt="site"/> : null}
+        {(url === "erps") ? <img className="sitepic" style={{width: `${size}`, borderRadius: `${borderradius}`,}} src={erps} alt="site"/> : null}
         {/*Badges:*/}
         {(url === "js") ? <img style={{width: `${size}` }} src={js} alt="site"/> : null}
         {(url === "node") ? <img style={{width: `${size}` }} src={node} alt="site"/> : null}
@@ -62,12 +73,21 @@ function SingleImage({url, size, divsize, display, badge, social}) {
         {(url === "ts") ? <img style={{width: `${size}` }} src={ts} alt="site"/> : null}
         {(url === "api") ? <img style={{width: `${size}` }} src={api} alt="site"/> : null}
         {/*Programming Logos:*/}
-            {(url === "js_") ? <img style={{width: `${size}` }} src={js_} alt="site"/> : null}
-            {(url === "node_") ? <img style={{width: `${size}` }} src={node_} alt="site"/> : null}
-            {(url === "react_") ? <img style={{width: `${size}`}} src={react_} alt="site"/> : null}
-            {(url === "html_") ? <img style={{width: `${size}` }} src={html_} alt="site"/> : null}
-            {(url === "css_") ? <img style={{width: `${size}` }} src={css_} alt="site"/> : null}
-            {(url === "ts_") ? <img style={{width: `${size}` }} src={ts_} alt="site"/> : null}
+            {(url === "js_") ? <img style={{width: `${size}` }} src={js_} alt="js"/> : null}
+            {(url === "node_") ? <img style={{width: `${size}` }} src={node_} alt="node"/> : null}
+            {(url === "react_") ? <img style={{width: `${size}`}} src={react_} alt="react"/> : null}
+            {(url === "html_") ? <img style={{width: `${size}` }} src={html_} alt="html"/> : null}
+            {(url === "css_") ? <img style={{width: `${size}` }} src={css_} alt="css"/> : null}
+            {(url === "ts_") ? <img style={{width: `${size}` }} src={ts_} alt="ts"/> : null}
+            {(url === "router_") ? <img style={{width: `${size}` }} src={router_} alt="router"/> : null}
+            {(url === "redux_") ? <img style={{width: `${size}` }} src={redux_} alt="redux"/> : null}
+            {(url === "bootstrap_") ? <img style={{width: `${size}`}} src={bootstrap_} alt="bootstrap"/> : null}
+            {(url === "mui_") ? <img style={{width: `${size}` }} src={mui_} alt="mui"/> : null}
+            {(url === "sass_") ? <img style={{width: `${size}` }} src={sass_} alt="sass"/> : null}
+            {(url === "firebase_") ? <img style={{width: `${size}` }} src={firebase_} alt="firebase"/> : null}
+            {(url === "sql_") ? <img style={{width: `${size}` }} src={sql_} alt="sql"/> : null}
+            {(url === "styled_") ? <img style={{width: `${size}` }} src={styled_} alt="styled"/> : null}
+            {(url === "aws_") ? <img style={{width: `${size}` }} src={aws_} alt="aws"/> : null}
         {/*Social Network Logos:*/}
             {(url === "instagram") ? <img style={{width: `${size}` }} src={instagram} alt="site"/> : null}
             {(url === "email") ? <img style={{width: `${size}` }} src={email} alt="email"/> : null}

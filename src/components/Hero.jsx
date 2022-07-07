@@ -1,6 +1,6 @@
 import React from 'react'
 import "../assets/css/hero.css"
-import heroi from "../assets/images/arpia.png"
+import heroi from "../assets/images/imagem-indisponivel.png"
 import heroi2 from "../assets/images/selfie1.png"
 import heroi3 from "../assets/images/selfie2.png"
 
@@ -11,7 +11,7 @@ function Hero() {
 
       <div className="hero-left">
         <div className="hero-texts"> {/*Introduction:*/}
-          <span className="text-out" style={{color: '#FBFCFF', lineHeight: '2.3rem'}}>Meu nome é <span className="text-in" style={{color: '#e5e510'}}>Guilherme Pedro Velho</span>, mas @guipedrov é mais curto. Sou <span className="text-in" style={{color: '#e5e510'}}>desenvolvedor front-end</span> e moro em Cabo Frio/RJ.</span>
+          <span className="text-out" style={{color: '#FBFCFF'}}>Meu nome é <span className="text-in" style={{color: '#e5e510'}}>Guilherme Pedro Velho</span>, mas @guipedrov é mais curto. Sou <span className="text-in" style={{color: '#e5e510'}}>desenvolvedor front-end</span> e moro em Cabo Frio/RJ.</span>
           <br/><br/>
           Consigo resolver um cubo mágico em 1 minuto e te ensinar em 20.
           <br/>

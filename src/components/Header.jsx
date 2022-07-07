@@ -18,8 +18,9 @@ function Header() {
       </div>
 
       <div>
-        <div style={{color: '#405025'}}>PT</div>
-        <div style={{color: '#cccccc'}}>EN</div>
+        <button className="lang pt">PT</button>
+        <button className="lang en">EN</button>
+        <div className="lang-warning">Not available</div>
       </div>
 
     </header>

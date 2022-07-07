@@ -4,8 +4,10 @@ header {
     justify-content: space-between;
     align-items: center;
     /*not concerning flex:*/
+    padding-left: 4rem;
     padding-top: 2rem;
     padding-bottom: 3rem;
+    padding-right: 4rem;
 }
 /* ====== Each box of the Header.jsx (there are 3): ====== */
 header > div:nth-child(1) { /*Menu*/
@@ -14,7 +16,6 @@ header > div:nth-child(1) { /*Menu*/
     column-gap: 1.4rem;
     row-gap: 0.4rem;
     flex: 1;
-    padding-left: 4rem;
     padding-right: 1.2rem;
     color: #e5e510;
 }
@@ -30,7 +31,7 @@ header > div:nth-child(1) > a:hover {
     text-decoration: underline;
 }
 header > div:nth-child(2) { /*Logo*/
-    font-size: 1.9rem;
+    font-size: 1.95rem;
     text-align: center;
     flex: 2;
     white-space: nowrap;
@@ -41,21 +42,44 @@ header > div:nth-child(2) { /*Logo*/
 header > div:nth-child(3) { /*Languages*/
     display: flex;
     justify-content: end;
-    padding-right: 3rem;
     flex: 1;
 }
-header > div:nth-child(3) > div {
-    padding-left: 2rem;
+header > div:nth-child(3) > button {
+    padding: 0.55em 0.55em 0.55em 0.55em;
+    margin-right: 0;
 }
-header > div:nth-child(3) > div:nth-child(1) {
+header > div:nth-child(3) > button:nth-child(1) { /*PT*/
+    color: #405025;
+    background: #e9e9d9;
+    border: 1px solid #405025;
+    box-shadow: 1px 1px #405025;
+    cursor: pointer;
+    margin-right: 12px;
+}
+header > div:nth-child(3) > button:nth-child(1):hover {
+    border-radius: 11px;
     border: 1px solid #405025;
     background: #405025;
     color: #FBFCFF;
 }
-header > div:nth-child(3) > div:nth-child(2) {
-    border: 1px solid #30292F;
-    background: #30292F;
-    color: #FBFCFF;
+header > div:nth-child(3) > button.lang.en:nth-child(2) { /*EN*/
+    border: 0px solid #000000;
+    background: #363035;
+    color: #4f494e;
+}
+header > div:nth-child(3) > div:nth-child(3) {
+    display: none;
+}
+.en:hover + .lang-warning{
+    display: block;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    background-color: #405025f0;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 12px 8px 12px;
 }
 
 /* ====== Screen: ====== */
@@ -74,6 +98,7 @@ header > div:nth-child(3) > div:nth-child(2) {
     }
     header > div:nth-child(2) {
         text-align: center;
+        padding-top: 1.35rem;
         flex: 1;
         font-size: 5vw;
         white-space: nowrap;
@@ -85,8 +110,6 @@ header > div:nth-child(3) > div:nth-child(2) {
         white-space: nowrap;
     }
     header > div:nth-child(3) {
-        justify-content: center;
-        padding: 0.5rem 1rem 1rem 1rem;
-        margin: 0 auto;
+        display: none;
     }
 }

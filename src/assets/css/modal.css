@@ -1,4 +1,141 @@
 .modal {
+    display: none;
+}
+.modal-open {
     display: block;
+}
+.modal-layer {
+    display: block;
+    content: '';
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #000000CC;
+    z-index: 3;
+}
+.modal-content-container {
+    overflow-y: initial !important;
+    display: flex;
+    padding:  1rem 1rem 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+.modal-content {
+    overflow-y: scroll;
+    max-height: calc(100vh - 200px);
+    /*overflow-y: auto;*/
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #e9e9d9;
+    border: 1px solid #405025;
+    box-shadow: 1px 1px #405025;
+    padding: 3rem 2.4rem 3rem 2.4rem;
+    position: fixed;
+    top: 2%;
+    max-width: fit-content;
+    background: #ffffff;
+    border-radius: 18px;
+    height: fit-content;
+    color: #000000;
+}
+.modal-flex {
+    max-width: calc(85vw - 16vh);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    column-gap: 2.2rem;
+}
+/*~~~~~~~~~~~~~~~~~~~~ Textos: ~~~~~~~~~~~~~~~~~~~~*/
+.modal-type { /*OK*/
+    display: inline-block;
+    padding-top: 2px;
+    padding-bottom: 9px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.modal-name { /*OK*/
+    padding-bottom: 1rem;
+    font-size: 1.465rem;
+    color: #30292F;
+    font-size: 2rem;
+}
+.modal-pic { /*OK*/
+    display: block;
+    width: 90%;
+}
+.modal-badge { /*OK*/
+    display: block;
+    width: 5rem;
+}
+.modal-desc { /*OK*/
+    display: block;
+    padding: 1.2rem 0 1rem 0;
+    color: #30292F;
+}
+.modal-git { /*OK*/
+    padding: 1rem 0 0 0;
+    display: block;
+    font-weight: 700;
+    color:#405025;
+}
+.modal-original { /*OK*/
+    display: inline-block;
+    max-width: fit-content;
+    margin-top: 0.7rem;
+    padding: 0.4rem 0.4rem 0.5rem 0.55rem;
+    border-radius: 11px;
+    border: 1px solid #483e47;
+    color: #483e47;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+    .modal-content {
+        top: 1%;
+        bottom: 10%;
+        max-height: calc(100vh - 30vh); /*Checar essas alturas calculadas*/
+        padding: 2.3rem 1.45rem 2.3rem 1.45rem;
+        overflow-y: scroll;
+    }
+    .modal-flex {
+        max-width: calc(100vw - 10vh); /*Checar essas alturas calculadas*/
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 2.2rem;
+        row-gap: 1rem;
+    }
+    .modal-pic { /*OK*/
+        display: block;
+        width: 100%;
+    }
+    .modal-badge { /*OK*/
+        display: block;
+        width: 12vw;
+    }
+    .modal-type { /*OK*/
+        display: inline-block;
+        padding-top: 2px;
+        padding-bottom: 9px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+    .modal-name { /*OK*/
+        padding-bottom: 1rem;
+        font-size: 1.465rem;
+        color: #30292F;
+        font-size: 2rem;
+    }
 }
 
