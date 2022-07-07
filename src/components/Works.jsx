@@ -5,7 +5,7 @@ import { Checkbox } from "semantic-ui-react";
 import '../assets/css/sections.css'
 import '../assets/css/works.css'
 
-function Works({works}) {
+function Works({works, handleModal}) {
   //variáveis que seguram os valores a serem filtrados:
   const [webapps, setWebapps] = useState('webapps')
   const [landingpages, setLandingpages] = useState('landingpages')
@@ -15,15 +15,15 @@ function Works({works}) {
   const [techsFiltersGroup, setTechsFiltersGroup] = useState(false)
   
   const allWorks = [ //Array de objetos (que abrigam os trabalhos):
-    {name: "Personality Pipe", date: "na", type: "spas", typename: "Single Page Application", desc: "", technologies: ["js", "ts", "html", "css", "react"], img: "personalitypipe", github: "", original: true},
-    {name: "Posso misturar?", date: "na", type: "spas", typename: "Single Page Application", desc: "", technologies: ["js", "html", "css", "react"], img: "possomisturar", github: "", original: true},
-    {name: "Crypto-Zap", date: "na", type: "spas", typename: "Single Page Application", desc: "", technologies: ["js", "html", "css", "react", "api"], img: "cryptozap", github: "", original: true},
-    {name: "1 Chat 4 All", date: "na", type: "webapps", typename: "Web App", desc: "", technologies: ["js", "html", "css", "react", "api"], img: "onechat4all", github: "", original: true},
-    {name: "Escola Montessoriana Maria Flor", date: "na", type: "spas", typename: "Single Page Application", desc: "", technologies: ["js", "html", "css", "react"], img: "mariaflor", github: "", original: true},
-    {name: "Karina Shiatsu", date: "na", type: "landingpages", typename: "Landing Page", desc: "", technologies: ["js", "html", "css", "react"], img: "karina", github: "", original: true},
-    {name: "Ohana Tour", date: "na", type: "statics", typename: "Static Site", desc: "", technologies: ["html", "css"], img: "ohanatour", github: "", original: true},
-    {name: "Pincel Cúbico", date: "na", type: "statics", typename: "Static Site", desc: "", technologies: ["html", "css"], img: "ohanatour", github: "", original: true},
-    {name: "ERPs", date: "na", type: "erp", typename: "Static Site", desc: "", technologies: ["js", "html", "css", "react"], img: "erps", github: "n/a", original: true},
+    {name: "Personality Pipe", date: "na", type: "spas", typename: "Single Page Application", desc: "", technologies: ["js", "ts", "html", "css", "react"], img: "personalitypipe", github: "", original: true, link: "aaa"},
+    {name: "Posso misturar?", date: "na", type: "spas", typename: "Single Page Application", desc: "", technologies: ["js", "html", "css", "react"], img: "possomisturar", github: "", original: true, link: ""},
+    {name: "Crypto-Zap", date: "na", type: "spas", typename: "Single Page Application", desc: "", technologies: ["js", "html", "css", "react", "api"], img: "cryptozap", github: "", original: true, link: ""},
+    {name: "1 Chat 4 All", date: "na", type: "webapps", typename: "Web App", desc: "", technologies: ["js", "html", "css", "react", "api"], img: "onechat4all", github: "", original: true, link: ""},
+    {name: "Escola Montessoriana Maria Flor", date: "na", type: "spas", typename: "Single Page Application", desc: "", technologies: ["js", "html", "css", "react"], img: "mariaflor", github: "", original: true, link: ""},
+    {name: "Karina Shiatsu", date: "na", type: "landingpages", typename: "Landing Page", desc: "", technologies: ["js", "html", "css", "react"], img: "karina", github: "", original: true, link: ""},
+    {name: "Ohana Tour", date: "na", type: "statics", typename: "Static Site", desc: "", technologies: ["html", "css"], img: "ohanatour", github: "", original: true, link: ""},
+    {name: "Pincel Cúbico", date: "na", type: "statics", typename: "Static Site", desc: "", technologies: ["html", "css"], img: "ohanatour", github: "", original: true, link: ""},
+    {name: "ERPs", date: "na", type: "erp", typename: "Static Site", desc: "", technologies: ["js", "html", "css", "react"], img: "erps", github: "n/a", original: true, link: ""},
   ]
 
   const isAllOpen = (webapps === "webapps" && landingpages === "landingpages" && spas === "spas" && statics === "statics")
@@ -193,7 +193,7 @@ function Works({works}) {
         </div>
         <div className="works-list">
           {allWorksFiltered.map(d => {
-            return <SingleWork key={d.name} name={d.name} type={d.type} typename={d.typename} date={d.date} technologies={d.technologies} imgcode={d.img} github={d.github} original={d.original} />
+            return <SingleWork key={d.name} name={d.name} type={d.type} typename={d.typename} date={d.date} technologies={d.technologies} imgcode={d.img} github={d.github} original={d.original} handleModal={handleModal} link={d.link} />
           })}
         </div>
     </div>
@@ -201,40 +201,3 @@ function Works({works}) {
 }
 
 export default Works
-
-/*
-onClick={firstClick("webapps")}
-onClick={firstClick("landingpages")}
-onClick={firstClick("spas")}
-onClick={firstClick("statics")}
-
-  let firstClick = (function(value) {
-    var executed = false;
-    return function() {
-      if (!executed) {
-        executed = true;
-        if (value === "webapps") {
-          setWebapps('webapps')
-          setLandingpages('')
-          setSpas('')
-          setStatics('')
-        } else if (value === "landingpages") {
-          setWebapps('')
-          setLandingpages('landingpages')
-          setSpas('')
-          setStatics('')
-        } else if (value === "spas") {
-          setWebapps('')
-          setLandingpages('')
-          setSpas('spas')
-          setStatics('')
-        } else if (value === "statics") {
-          setWebapps('')
-          setLandingpages('')
-          setSpas('')
-          setStatics('statics')
-        }
-      }
-    }
-  })
-*/
